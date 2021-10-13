@@ -14,9 +14,9 @@
 .album-details,
 .profile-info-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 20px;
+    gap: 10px;
     place-items: end center;
 }
 
