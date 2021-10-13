@@ -53,7 +53,7 @@ a {
     background-color: black;
     display: grid;
     grid-area: nav;
-    grid-template-rows: 50px 120px 1fr 40px 40px;
+    grid-template-rows: 50px 120px 1fr 40px 60px;
     gap: 20px;
 }
 
@@ -75,7 +75,8 @@ a {
 .nav-bar-option,
 .create-playlist,
 .playlist,
-.install-app {
+.install-app,
+.user-button {
     background-color: black;
     border: none;
     text-align: left;
@@ -153,6 +154,14 @@ a {
 
 .user img {
     border-radius: 50%;
+}
+.user-button {
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+.user-button:hover {
+    background-color: #282828;
 }
 
 /*** MUSIC MENU ***/
@@ -244,13 +253,13 @@ header,
     width: 220px;
 }
 
-.play-button-container {
+.play-button-container,
+.small-logo-container {
     position: absolute;
     width: 220px;
     height: 220px;
     padding-left: 10px;
     padding-top: 10px;
-    display: inline-block;
 }
 
 .play-hover-button {
@@ -273,6 +282,12 @@ header,
 
 .play-button-container:hover .play-hover-button {
     opacity: 1;
+}
+
+.small-logo-container img {
+    height: 18px;
+    width: 18px;
+    opacity: .5;
 }
 
 .img-rel {

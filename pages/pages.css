@@ -5,21 +5,26 @@
     gap: 30px;
 }
 
-.album-container h1 {
+.album-container h1,
+.profile-info-container h1 {
     color: white;
     font-size: 3rem;
 }
 
-.album-details {
+.album-details,
+.profile-info-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
     grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 20px;
     place-items: end center;
 }
 
-.album-info {
+.album-info,
+.profile-info {
     display: grid;
     gap: 20px;
+    padding-left: 30px;
 }
 
 .album-tracks {
@@ -34,4 +39,85 @@
 
 .album-details img {
     height: 300px;
+}
+
+.profile-container {
+    display: grid;
+    background-image: linear-gradient(180deg, #380C21, #121212);
+}
+
+.profile-info-container {
+    height: auto;
+    padding: 40px 20px;
+    background-image: linear-gradient(180deg, #8F1B50, #490E29);
+    display: grid;
+}
+
+.profile-info-container img {
+    border-radius: 50%;
+    width: 280px;
+    display: grid;
+}
+
+.profile-info-container h1 {
+    display: grid;
+}
+
+.profile-info h4,
+.profile-info p,
+.profile-info a,
+.profile-info span{
+    color: white;
+}
+
+.profile-info a {
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+.profile-info p,
+.profile-info a,
+.profile-info span {
+    display: inline-block;
+}
+
+.profile-container .music-row h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.profile-container .artist {
+    background-color: #141414;
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: grid;
+}
+
+.profile-container .artist:hover {
+    background-color: #282828;
+}
+
+
+.profile-container .artist img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.profile-container .artist p {
+    color: white;
+    font-weight: 400;
+}
+
+.profile-container .artist h3,
+.profile-container .artist p {
+    text-align: left;
+}
+
+.profile-container .artist h3 {
+    font-weight: 500;
 }
