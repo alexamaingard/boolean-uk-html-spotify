@@ -21,7 +21,8 @@ h4 {
     font-size: 1rem;
 }
 
-p {
+p, 
+a {
     font-size: .9rem;
     font-weight: 600;
 }
@@ -34,6 +35,15 @@ a {
 
 .caps-lock {
     text-transform: uppercase;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+body::-webkit-scrollbar,
+.playlists::-webkit-scrollbar{
+    width: 0;
 }
 
 /*** TOP-PAGE CONTAINER ***/
@@ -57,39 +67,38 @@ a {
     gap: 20px;
 }
 
-.logo,
-.playlists h4,
-.user {
-    padding-left: 5px;
-}
-
 #main-logo {
     width: 160px;
 }
 
-.nav-bar-options {
+.nav-bar-options,
+.playlists-list {
     display: grid;
+}
+
+.nav-bar-options {
     grid-template-rows: repeat(3, auto);
 }
 
-.nav-bar-option,
-.create-playlist,
-.playlist,
-.install-app,
-.user-button {
-    background-color: black;
-    border: none;
-    text-align: left;
+.side-bar a {
+    text-decoration: none;
+}
+
+.side-nav-bar {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding-left: 0;
 }
 
 .create-playlist svg,
-.create-playlist p,
+.create-playlist a,
 .nav-bar-option img,
-.nav-bar-option p,
+.nav-bar-option a,
 .install-app img,
-.install-app p,
+.install-app a,
 .user img,
-.user h4 {
+.user a {
     display: inline-block;
     vertical-align: middle;
 }
@@ -99,8 +108,14 @@ a {
     width: 30px;
 }
 
+
+
+.playlists {
+    overflow-x: auto;
+}
+
 .playlists h4,
-.user h4 {
+.user a {
     color: white;
     font-weight: 700;
 }
@@ -109,10 +124,14 @@ a {
     padding-bottom: 10px;
 }
 
-.nav-bar-option:hover p,
-.create-playlist:hover p,
-.playlist:hover p,
-.install-app:hover p {
+.playlists-list{
+    gap: 15px;
+}
+
+.nav-bar-option a:hover,
+.create-playlist a:hover,
+.playlist a:hover,
+.install-app:hover {
     color: white;
 }
 
@@ -123,24 +142,17 @@ a {
     width: 35px;
 }
 
-.create-playlist:hover .plus{
+.create-playlist a:hover .plus{
     background-color: white;
 }
 
-.create-playlist,
-.playlist,
-.install-app {
+.install-app,
+.user {
     height: 40px;
     width: 100%;
 }
 
-.create-playlist p,
-.install-app p,
-.user h4 {
-    padding-left: 5px;
-}
-
-.create-playlist p {
+.create-playlist a {
     font-size: 1.1rem;
 }
 
@@ -148,25 +160,22 @@ a {
     width: 20px;
 }
 
-.install-app {
+.install {
     border-bottom: 2px solid #585858;
 }
-
-.user img {
-    border-radius: 50%;
-}
-.user-button {
-    padding: 10px 20px;
+.user {
+    padding: 5px 20px;
     border-radius: 40px;
 }
 
-.user-button:hover {
+.user:hover {
     background-color: #282828;
 }
 
 /*** MUSIC MENU ***/
 .main-container {
     background-color: #151921;
+    height: 100%;
     display: grid;
     grid-area: main;
 }
@@ -176,6 +185,10 @@ header {
     padding-right: 30px;
     display: grid;
     place-items: center end;
+}
+
+header a{
+    text-decoration: none;
 }
 
 header,
@@ -192,6 +205,7 @@ header,
 
 .upgrade:hover {
     background-color: #282828;
+    transform: scale(1.1);
 }
 
 .home-nav,
@@ -214,6 +228,9 @@ header,
     text-decoration: underline #BFFC5B;
     text-decoration-thickness: 0.3rem;
     text-underline-offset: 2px;
+    color: white;
+    font-weight: 400;
+    transform: scale(1.1);
 }
 
 .music-container {
@@ -258,8 +275,7 @@ header,
     position: absolute;
     width: 220px;
     height: 220px;
-    padding-left: 10px;
-    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .play-hover-button {
@@ -268,8 +284,11 @@ header,
     padding: 12px;
     border: none;
     border-radius: 50%;
-    background-color: #8acc1f;
+    background-color: white;
     opacity: 0;
+    position: inherit;
+    top: 90px;
+    left: 90px;
 }
 
 .play-button-container:before {
@@ -280,14 +299,27 @@ header,
     opacity: 1;
 }
 
+.play-button-container:hover {
+    opacity: 1;
+}
+
 .play-button-container:hover .play-hover-button {
     opacity: 1;
+}
+
+
+.play-button-container:hover,
+.small-logo-container:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .small-logo-container img {
     height: 18px;
     width: 18px;
     opacity: .5;
+    position: inherit;
+    top: 10px;
+    left: 10px;
 }
 
 .img-rel {
@@ -296,36 +328,23 @@ header,
     opacity: .9;
 }
 
-.img-abs {
-    position: absolute;
-    height: 25px;
-    top: 1px;
-}
-
-.artist img {
-    border-radius: 50%;
-}
-
 /*** FOOTER ***/
 footer {
     position: sticky;
     bottom: 0;
     z-index: 100;
     height: 8vh;
-
     display: grid;
     grid-template-columns: 290px 1fr 190px;
     gap: 20px;
 }
 
-footer,
-footer button,
-.playing {
+footer {
     background-color: #282828;
 }
 
-footer button {
-    border: none;
+footer a {
+    text-decoration: none;
 }
 
 .playing {
@@ -412,7 +431,8 @@ footer button {
     display: inline-block;
 }
 
-/*** MEDIA QUERIES ***/
+/*
+
 @media screen and (max-width: 930px) {
     .track-progress {
         display: none;
@@ -440,3 +460,4 @@ footer button {
         display: none;
     }
 }
+*/

@@ -19,70 +19,121 @@
                 <img id="main-logo" src="../assets/img/logo.svg" alt="spotify-logo">
             </div>
             <div class="nav-bar-options">
-                <button onclick="location.href='../index.html'" class="nav-bar-option">
-                    <img src="../assets/img/home.svg" alt="home">
-                    <p>Home</p>
-                </button>
-                <button class="nav-bar-option">
-                    <img src="../assets/img/search.svg" alt="search">
-                    <p>Search</p>
-                </button>
-                <button class="nav-bar-option">
-                    <img src="../assets/img/libreria.svg" alt="libraries">
-                    <p>Your library</p>
-                </button>
+                <ul class="side-nav-bar">
+                    <li class="nav-bar-option"><a href="../index.html"><img src="../assets/img/home.svg" alt="home">Home</a></li>
+                    <li class="nav-bar-option"><a href=""><img src="../assets/img/search.svg" alt="search">Search</a></li>
+                    <li class="nav-bar-option"><a href=""><img src="../assets/img/libreria.svg" alt="libraries">Your library</a></li>
+                </ul>
             </div>
             <div class="playlists">
                 <h4 class="caps-lock">Playlist</h4>
-                <button class="create-playlist">
-                    <svg class="plus" role="img" height="20" width="20" aria-hidden="true" view-box="0 0 16 16">
-                        <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
-                        <path fill="none" d="M0 0h16v16H0z"></path>
-                    </svg>
-                    <p>Create playlist</p>
-                </button>
-                <button class="playlist">            
-                    <p>Supernatural Soundtrack</p>
-                </button>
-                <button class="playlist">
-                    <p>Disney faves</p>
-                </button>
-                <button class="playlist">
-                    <p>La Argentinidad al Palo</p>
-                </button>
-                <button class="playlist">
-                    <p>Kaffeehausmusik</p>
-                </button>
-                <button class="playlist">
-                    <p>Hintergrundmusik</p>
-                </button>
-                <button class="playlist">
-                    <p>Romantic Vibey Mood</p>
-                </button>
-                <button class="playlist">
-                    <p>Chill instrumentals</p>
-                </button>
-                <button class="playlist">
-                    <p>Chillax</p>
-                </button>
-                <button class="playlist">
-                    <p>Latina Mood</p>
-                </button>
-                <button class="playlist">
-                    <p>Indiepunkish</p>
-                </button>   
+                <ul class="side-nav-bar playlists-list">
+                    <li class="create-playlist">
+                        <a href="">
+                            <svg class="plus" role="img" height="20" width="20" aria-hidden="true" view-box="0 0 16 16">
+                                <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                                <path fill="none" d="M0 0h16v16H0z"></path>
+                            </svg>
+                            Create playlist
+                        </a>    
+                    </li>
+                    <li class="playlist">
+                        <a href="">Supernatural Soundtrack</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Disney faves</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">La Argentinidad al Palo</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Kaffeehausmusik</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Hintergrundmusik</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Romantic Vibey Mood</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Chill instrumentals</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Chillax</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Latina Mood</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Indiepunkish</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">morning coffeehouse</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">ECDLS VOL:II</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Sleep</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Podcasts</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Pepper Radio</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Rockhymnen</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Edgy vibes</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Previa</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Cheesy Weird S$&#</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Pop Mood</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">sad lofi beats to study</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">TB Melanco</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Try out (singing)</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Discover Weekly Picks</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Hype Upbeat</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Chill vibey covers</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">Reading Soundtrack</a>
+                    </li>
+                    <li class="playlist">
+                        <a href="">El CLUB de la Serpiente</a>
+                    </li>
+                </ul>  
             </div>
             <div class="install">
-                <button class="install-app">
+                <a class="install-app" href="">
                     <img src="../assets/img/download.svg" alt="download">
-                    <p>Install app</p>
-                </button>
+                    Install app
+                </a>
             </div>
             <div class="user">
-                <button onclick="location.href='../pages/profile.html'" class="user-button">
-                    <img src="../assets/img/lexy.jpg" alt="lexy">
-                    <h4>Alexa Maingard</h4>
-                </button>
+                <a href="../pages/profile.html">
+                    <img class="round" src="../assets/img/lexy.jpg" alt="lexy">
+                    Alexa Maingard
+                </a>
             </div>
         </nav>
         <main>
