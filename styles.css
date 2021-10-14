@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -42,7 +43,8 @@ a {
 }
 
 body::-webkit-scrollbar,
-.playlists::-webkit-scrollbar{
+.side-bar::-webkit-scrollbar,
+.playlists-list::-webkit-scrollbar{
     width: 0;
 }
 
@@ -58,7 +60,7 @@ body::-webkit-scrollbar,
 .side-bar {
     position: sticky;
     top: 0;
-    height: 92vh;
+    height: calc(100vh - 6rem);
     padding: 15px;
     background-color: black;
     display: grid;
@@ -108,10 +110,9 @@ body::-webkit-scrollbar,
     width: 30px;
 }
 
-
-
 .playlists {
-    overflow-x: auto;
+    display: grid;
+    gap: 10px;
 }
 
 .playlists h4,
@@ -126,6 +127,12 @@ body::-webkit-scrollbar,
 
 .playlists-list{
     gap: 15px;
+    max-height: 55vh;
+}
+
+.side-bar,
+.playlists-list {
+    overflow-y: auto;
 }
 
 .nav-bar-option a:hover,
@@ -160,13 +167,20 @@ body::-webkit-scrollbar,
     width: 20px;
 }
 
+.install,
+.user {
+    position: sticky;
+}
+
 .install {
     border-bottom: 2px solid #585858;
 }
+
 .user {
     padding: 5px 20px;
     border-radius: 40px;
 }
+
 
 .user:hover {
     background-color: #282828;
@@ -181,7 +195,7 @@ body::-webkit-scrollbar,
 }
 
 header {
-    height: 8vh;
+    height: 6rem;
     padding-right: 30px;
     display: grid;
     place-items: center end;
@@ -282,7 +296,6 @@ header,
     height: 40px;
     width: 40px;
     padding: 12px;
-    border: none;
     border-radius: 50%;
     background-color: white;
     opacity: 0;
@@ -322,24 +335,15 @@ header,
     left: 10px;
 }
 
-.img-rel {
-    position: relative;
-    object-fit: cover;
-    opacity: .9;
-}
-
 /*** FOOTER ***/
 footer {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     z-index: 100;
-    height: 8vh;
-    display: grid;
-    grid-template-columns: 290px 1fr 190px;
-    gap: 20px;
-}
-
-footer {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
     background-color: #282828;
 }
 
@@ -347,10 +351,36 @@ footer a {
     text-decoration: none;
 }
 
+.playing,
+.player-controls,
+.player-options {
+    background-color: #282828;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+}
+
+.song a:hover {
+    text-decoration: underline;
+}
+
+.song-name{
+    color: white;
+    font-size: .9rem;
+}
+
+.playing,
+.player-options {
+    min-width: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .playing {
     padding-left: 10px;
-    grid-template-columns: 50px 1fr 30px 30px;
-    gap: 6px;
 }
 
 .playing .song-thumbnail {
@@ -361,44 +391,34 @@ footer a {
     width: 16px;
 }
 
-.playing h4 {
-    color: white;
-    font-size: .9rem;
-}
-
-.playing p {
+.artist-name {
     font-size: .8rem;
 }
 
 .play {
-    background-color: white;
-    width: 45px;
-    height: 45px;
-    padding: 9px;
+    height: 40px;
+    width: 40px;
+    padding: 12px;
     border-radius: 50%;
-}
-
-.playing,
-.player-controls,
-.player-options {
-    display: grid;
-    place-items: center;
+    background-color: white;
 }
 
 .player-controls{
-    padding: 10px;
-    display: grid;
-    place-items: center;
-    grid-template-rows: 50px 10px;
-    gap: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.track-progress,
-.track-progress p,
-.progress-bar {
-    display: inline-block;
-    vertical-align: middle;
+.track-controls,
+.track-progress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
+
 
 .progress-bar {
     background-color: rgba(255, 255, 255, 0.513);
@@ -414,6 +434,10 @@ footer a {
     border-radius: 20px;
 }
 
+.inner-progress-bar:hover {
+    background-color: rgb(171, 230, 53);
+}
+
 .player-options {
     padding: 3vh 0;
 }
@@ -427,37 +451,9 @@ footer a {
 .queue,
 .device-connect,
 .mute-unmute,
-.player-options .progress-bar {
-    display: inline-block;
+.player-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-
-/*
-
-@media screen and (max-width: 930px) {
-    .track-progress {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 780px) {
-    .player-options {
-        display: none;
-    }
-    .playing .like,
-    .playing .save {
-        display: none;
-    }
-    .playing {
-        grid-template-columns: 50px 150px;
-    }
-}
-
-@media screen and (max-width: 730px) {
-    .shuffle,
-    .prev-track,
-    .next-track,
-    .repeat {
-        display: none;
-    }
-}
-*/

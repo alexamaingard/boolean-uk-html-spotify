@@ -26,16 +26,14 @@
             </div>
             <div class="playlists">
                 <h4 class="caps-lock">Playlist</h4>
+                <a class="create-playlist" href="">
+                    <svg class="plus" role="img" height="20" width="20" aria-hidden="true" view-box="0 0 16 16">
+                        <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
+                        <path fill="none" d="M0 0h16v16H0z"></path>
+                    </svg>
+                    Create playlist
+                </a> 
                 <ul class="side-nav-bar playlists-list">
-                    <li class="create-playlist">
-                        <a href="">
-                            <svg class="plus" role="img" height="20" width="20" aria-hidden="true" view-box="0 0 16 16">
-                                <path d="M14 7H9V2H7v5H2v2h5v5h2V9h5z"></path>
-                                <path fill="none" d="M0 0h16v16H0z"></path>
-                            </svg>
-                            Create playlist
-                        </a>    
-                    </li>
                     <li class="playlist">
                         <a href="">Supernatural Soundtrack</a>
                     </li>
@@ -231,7 +229,7 @@
                         <p>The more you listen, the more accurate the suggestions.</p>
                         <div class="artworks">
                             <div class="album">
-                                <img class="img-rel" src="assets/img/playlists/discover.jpg" alt="discover">
+                                <img src="assets/img/playlists/discover.jpg" alt="discover">
                                 <h3>Discover Weekly</h3> 
                                 <div class="play-button-container">
                                     <a class="play-hover-button" href="">
@@ -242,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="album">
-                                <img class="img-rel" src="assets/img/playlists/radar.jpg" alt="radar">
+                                <img src="assets/img/playlists/radar.jpg" alt="radar">
                                 <h3>Release Radar</h3>  
                                 <div class="play-button-container">
                                     <a class="play-hover-button" href="">
@@ -253,7 +251,7 @@
                                 </div>                            
                             </div>
                             <div class="album">
-                                <img class="img-rel" src="assets/img/playlists/for-you.jpg" alt="for-you">
+                                <img src="assets/img/playlists/for-you.jpg" alt="for-you">
                                 <h3>Daily Mix 1</h3>
                                 <div class="small-logo-container">
                                     <img src="assets/img/logo-small.svg" alt="logo">
@@ -267,7 +265,7 @@
                                 </div>
                             </div>
                             <div class="album">
-                                <img class="img-rel" src="assets/img/playlists/for-you.jpg" alt="for-you">
+                                <img src="assets/img/playlists/for-you.jpg" alt="for-you">
                                 <h3>Daily Mix 2</h3>
                                 <div class="small-logo-container">
                                     <img src="assets/img/logo-small.svg" alt="logo">
@@ -332,8 +330,8 @@
         <div class="playing">
             <img class="song-thumbnail" src="assets/img/playing.jpg" alt="playing">
             <div class="song">
-                <h4>Heartless</h4>
-                <p>A Day to Remember</p>
+                <a class="song-name" href="">Heartless</a>
+                <a class="artist-name" href="">A Day to Remember</a>
             </div>
             <a class="like" href="">
                 <svg role="img" height="16" width="16" view-box="0 0 16 16">
@@ -344,7 +342,6 @@
                 <img src="assets/img/folder.svg" alt="saved">
             </a>
         </div>
-
         <div class="player-controls">
             <div class="track-controls">
                 <a class="shuffle" href="">
@@ -358,7 +355,7 @@
                     </svg>
                 </a>
                 <a class="play" href="">
-                    <svg role="img" height="16" width="16" view-box="0 0 16 16">
+                    <svg class="play-svg" role="img" height="16" width="16" view-box="0 0 16 16">
                         <path d="M4.018 14L14.41 8 4.018 2z"></path>
                     </svg>
                 </a>
